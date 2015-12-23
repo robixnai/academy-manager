@@ -1,0 +1,24 @@
+{
+  "name": "academy-manager-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "DEBUG=academy-manager:* nodemon ./bin/www.js"
+  },
+  "keywords": [
+    "Academy",
+    "Manager",
+    "Api"
+  ],
+  "author": "Renan Johannsen de Paula",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.14.2",
+    "cors": "^2.7.1",
+    "debug": "^2.2.0",
+    "express": "^4.13.3",
+    "mongoose": "^4.3.3"
+  }
+}

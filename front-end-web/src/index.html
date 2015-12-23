@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="am">
+  <head>
+    <meta charset="utf-8">
+    <title>Academy Manager</title>
+  </head>
+
+  <body>
+    <div ng-controller="StudentController as studentCtrl" ng-init="studentCtrl.init()">
+      <h1>Hello: {{ studentCtrl.student._id }}</h1>
+
+      <form ng-submit="studentCtrl.save(studentCtrl.student)">
+        <input type="text" required ng-model="studentCtrl.student.name">
+
+        <button type="submit">Salvar</button>
+      </form>
+
+      <ul>
+        <li ng-repeat="student in studentCtrl.students">{{ student.name }}</li>
+      </ul>
+
+    </div>
+
+    <script type="text/javascript" src="../bower_components/angular/angular.min.js"></script>
+
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/conf/api-config.js"></script>
+
+    <script type="text/javascript" src="js/services/student-service.js"></script>
+
+    <script type="text/javascript" src="js/controllers/student-controller.js"></script>
+  </body>
+</html>
